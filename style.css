@@ -171,6 +171,10 @@ article .title {
 }
 
 .card-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: space-around;
 }
 
 .card {
@@ -179,6 +183,7 @@ article .title {
   background: white;
   padding-bottom: 32px;
   border-radius: 10px;
+  flex-grow: 1;
 }
 
 .card img {
@@ -195,12 +200,6 @@ article .title {
 
 .btn:hover .card-btn:hover {
   cursor: pointer;
-}
-
-.card-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 24px;
 }
 
 /* form */
@@ -223,4 +222,85 @@ footer {
   padding: 64px;
   text-align: center;
   margin-top: 32px;
+}
+
+/* media quires */
+/* 0 - 600px mobile below 600 */
+
+/* @media (max-width: 600px) {
+  .global {
+    background-color: rgb(235, 90, 196);
+    /* 10px top and bottom padding */
+/* padding: 10px 0; */
+/* to hide */
+/* display: none; */
+/* }
+} */
+
+/* larger monitir or TV 992px + -> */
+/* @media (width > 992px{
+
+}) */
+/* @media (min-width: 992px) {
+  header {
+    background: rgb(27, 167, 183);
+    color: rgb(226, 99, 20);
+    padding: 10px 0;
+  }
+} */
+
+/* @media (600px < width < 992px) {
+  header {
+    background: rgb(205, 50, 190);
+  }
+} */
+
+/* 0 - 992px then overrides so, */
+/* 600px - 992px for iPad */
+@media (max-width: 992px) {
+  .main {
+    display: flex;
+    flex-direction: column;
+  }
+  .articles {
+    width: 100%;
+  }
+  .side-links {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    margin-top: 50spx;
+  }
+  .country {
+    margin-bottom: 0;
+  }
+  .country,
+  .date {
+    flex-grow: 1;
+  }
+}
+
+/* 0 - 600px - mobile screen */
+@media (max-width: 600px) {
+  /* hide global message */
+
+  article {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .art-img {
+    width: 100%;
+  }
+
+  .side-links {
+    flex-direction: column;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
 }
